@@ -18,11 +18,6 @@ public class AlbumResource {
     @Autowired
     private AlbumService albumService;
 
-    @GetMapping("/album")
-    public Album getAlbum(){
-        return albumService.getAlbum();
-
-    }
 
     @PostMapping("/album")
     public Album saveAlbum(@RequestBody Album album){
@@ -30,7 +25,7 @@ public class AlbumResource {
         return albumService.saveAlbum(album);
     }
 
-    @GetMapping("/albums")
+    @GetMapping("/album")
     public List<Album> getAllAlbums(){
         return albumService.getAllAlbums();
 
